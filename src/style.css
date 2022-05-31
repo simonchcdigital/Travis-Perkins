@@ -1,0 +1,55 @@
+body{
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#section-selector-container{
+	position: fixed;
+	width: 100px;
+	right: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px 0;
+}
+
+.section-selector{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: black;
+}
+
+#sections-container{
+	height: 100%;
+}
+
+.section{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-content{
+	height: min(100vw, 100vh);
+	width: min(100vw, 100vh);
+	margin: auto;
+}
+.animation-layer{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	pointer-events: none;
+}
+
+.animated-sprite{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background-color: blue;
+}
