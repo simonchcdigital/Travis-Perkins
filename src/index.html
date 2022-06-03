@@ -3,8 +3,9 @@
 <head>
 	<title>Gardening Month to Month</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="anime.min.js"></script>
-	<script src="animations.js"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<script src="./animations.js"></script>
+	<script src="./swiped-events.min.js"></script>
 </head>
 <body>
 	<div id="section-selector-container"></div>
@@ -12,16 +13,20 @@
 		<div class="section">
 			<div class="section-content"></div>
 			<div class="animation-layer">
-				<div class="animated-sprite random-crawl" style="top: 500px; left: 500px;"></div>
+				<lottie-player src="./animations/weeding.json" loop>
 			</div>
 		</div>
 		<div class="section">
 			<div class="section-content"></div>
-			<div class="animation-layer"></div>
+			<div class="animation-layer">
+				<lottie-player src="./animations/weeding.json" loop>
+			</div>
 		</div>
 		<div class="section">
 			<div class="section-content"></div>
-			<div class="animation-layer"></div>
+			<div class="animation-layer">
+				<lottie-player src="./animations/weeding.json" loop>
+			</div>
 		</div>
 		<div class="section">
 			<div class="section-content"></div>

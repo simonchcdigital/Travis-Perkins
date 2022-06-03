@@ -1,61 +1,17 @@
 window.addEventListener("DOMContentLoaded", function(event){
-
-	/*
-	anime({
-	  targets: "h1",
-	  translateX: 250
-	});
-	*/
-
 	number_sections();
 	setup_section_selectors();
-	setup_section_colors();
-	setup_animations();
+	start_first_slide();
+	//setup_section_colors();
 });
 
-window.crawling_sprites = [];
-
-function setup_animations(){
-	let sprites = document.querySelectorAll(".animated-sprite");
-	sprites.forEach(function(sprite, index, all_sprites){
-		if(sprite.classList.contains("random-crawl")){
-			window.crawling_sprites.push(sprite);
-		}
-	});
-	run_animations();
-}
-
-function run_animations(timestamp){
-	if(window.crawling_sprites.length > 0){
-		window.crawling_sprites.forEach(function(sprite, index){
-			random_crawl_step(sprite)
-		});
-	}
-
-	window.requestAnimationFrame(run_animations);
-}
-
-function move_elem_polar(elem, angle, distance){
-}
-
-function random_crawl_step(elem){
-	let pos = {
-		x: parseFloat(elem.style.left),
-		y: parseFloat(elem.style.top)
-	};
-	let variation = 10;
-
-	pos.x += (Math.random() - 0.5) * variation;
-	pos.y += (Math.random() - 0.5) * variation;
-
-	elem.style.left = pos.x + "px";
-	elem.style.top = pos.y + "px";
-}
+window.current_slide = 0;
 
 function number_sections(){
 	let sections = document.querySelectorAll(".section");
 	sections.forEach(function(sec, i){
 		sec.id = "section-" + i;
+		sec.dataset.sectionNumber = i;
 	});
 }
 
@@ -67,17 +23,60 @@ function setup_section_selectors(){
 		let section_selector = document.createElement("div");
 		section_selector.classList.add("section-selector")
 		section_selector.id = "selector-" + index;
+		section_selector.dataset.selectorNumber = index;
 		
-		section_selector.addEventListener("click", function(event){
-			let target_section = document.querySelector("#section-" + index);
-			target_section.scrollIntoView({block: "start", inline: "nearest", behavior: "smooth"});
-		});
+		section_selector.addEventListener("click", slide_transition);
 
 		section_selector_container.appendChild(section_selector);
 
 	});
 }
 
+function start_first_slide(){
+	document.querySelector("#section-0 lottie-player").play();
+	document.querySelector("#section-0").classList.add("active");
+}
+
+function slide_transition(event){
+	let target_index = event.target.dataset.selectorNumber;
+	let target_section = document.querySelector("#section-" + target_index);
+
+	// are we already on the current slide?
+	if (target_section.classList.contains("active")){
+		return;
+	}
+
+	// scroll the new section into view
+	target_section.scrollIntoView({block: "start", inline: "nearest", behavior: "smooth"});
+
+	// start the next section's animations
+	let target_animation_player = target_section.querySelector("lottie-player");
+	if(target_animation_player){
+		target_animation_player.play();
+	}
+
+
+	// stop the current section's animations after the scroll has happened
+	setTimeout(function(){
+		let current_section = document.querySelector("#section-" + window.current_slide);
+		let current_animation_player = current_section.querySelector("lottie-player");
+		if(current_animation_player){
+			current_animation_player.stop();
+		}
+
+		// remove "active" from current slide
+		current_section.classList.remove("active");
+
+		// add "active to the target slide
+		target_section.classList.add("active");
+
+		// update current slide
+		window.current_slide = target_index;
+	}, 300);
+	
+}
+
+// not neccessary anymore
 function setup_section_colors(){
 	let delta_hue = 10;
 
