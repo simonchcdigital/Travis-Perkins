@@ -1,9 +1,11 @@
 window.addEventListener("DOMContentLoaded", function(event){
 	number_sections();
 	setup_section_selectors();
+	setup_colors();
 	start_first_slide();
-	//setup_section_colors();
+	setup_wheel_transitions();
 });
+
 
 window.current_slide = 0;
 
@@ -35,10 +37,13 @@ function setup_section_selectors(){
 function start_first_slide(){
 	document.querySelector("#section-0 lottie-player").play();
 	document.querySelector("#section-0").classList.add("active");
+	document.querySelector("#selector-0").classList.add("selected");
 }
 
 function slide_transition(event){
-	let target_index = event.target.dataset.selectorNumber;
+	let target_selector = event.target;
+	let target_index = target_selector.dataset.selectorNumber;
+
 	let target_section = document.querySelector("#section-" + target_index);
 
 	// are we already on the current slide?
@@ -55,11 +60,20 @@ function slide_transition(event){
 		target_animation_player.play();
 	}
 
+	let current_selector = document.querySelector("#selector-" + window.current_slide);
+
+	// remove "selected" from the current selector
+	current_selector.classList.remove("selected");
+
+	// add "selected" to the target selector
+	target_selector.classList.add("selected");
+
 
 	// stop the current section's animations after the scroll has happened
 	setTimeout(function(){
 		let current_section = document.querySelector("#section-" + window.current_slide);
 		let current_animation_player = current_section.querySelector("lottie-player");
+
 		if(current_animation_player){
 			current_animation_player.stop();
 		}
@@ -67,8 +81,9 @@ function slide_transition(event){
 		// remove "active" from current slide
 		current_section.classList.remove("active");
 
-		// add "active to the target slide
+		// add "active" to the target slide
 		target_section.classList.add("active");
+
 
 		// update current slide
 		window.current_slide = target_index;
@@ -76,21 +91,41 @@ function slide_transition(event){
 	
 }
 
-// not neccessary anymore
-function setup_section_colors(){
-	let delta_hue = 10;
-
-	let sections = document.querySelectorAll(".section");
-	let section_hue = 0;
-	sections.forEach(function(current_section, index, all_sections){
-		current_section.style.backgroundColor = "hsl(" + section_hue + ", 75%, 75%)";
-		section_hue += delta_hue;
+function setup_wheel_transitions(){
+	window.addEventListener("swiped-up", function(){
+		next_slide();
 	});
 
-	let content_sections = document.querySelectorAll(".section-content");
-	let content_section_hue = 120;
-	content_sections.forEach(function(current_section, index, all_sections){
-		current_section.style.backgroundColor = "hsl(" + content_section_hue + ", 75%, 75%)";
-		content_section_hue += delta_hue;
+	window.addEventListener("swiped-down", function(){
+		prev_slide();
+	});
+
+	window.addEventListener("wheel", function(){
+		if(event.deltaY > 50){
+			next_slide();
+		}
+		if(event.deltaY > 50){
+			prev_slide();
+		}
+	});
+}
+
+function next_slide(){
+
+}
+
+function prev_slide(){
+
+}
+
+function setup_colors(){
+	let delta_hue = 10;
+
+	let sections = document.querySelectorAll(".spacer, .section");
+	let hue = 20;
+	sections.forEach(function(current_section, index){
+		current_section.style.background = "linear-gradient(0deg, " +
+			"hsl(" + hue + ((index+1)*delta_hue) + ", 40%, 20%) 0%," +
+			"hsl(" + hue + (index*delta_hue) + ", 40%, 20%) 100%) ";
 	});
 }
