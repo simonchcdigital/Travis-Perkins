@@ -47,8 +47,6 @@ function intro_animations(target_section){
 }
 
 function start_first_slide(){
-	// scroll to top
-
 
 	let first_section = document.querySelector("#section-0");
 	first_section.scrollIntoView();
