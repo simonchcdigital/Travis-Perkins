@@ -2,8 +2,8 @@ window.addEventListener("DOMContentLoaded", function(event){
 	number_sections();
 	setup_section_selectors();
 	setup_colors();
-	start_first_slide();
 	setup_wheel_transitions();
+	start_first_slide();
 });
 
 window.current_slide = 0;
@@ -47,10 +47,17 @@ function intro_animations(target_section){
 }
 
 function start_first_slide(){
+	// scroll to top
+
+
 	let first_section = document.querySelector("#section-0");
+	first_section.scrollIntoView();
+
 	first_section.querySelector("lottie-player").play();
 	first_section.classList.add("active");
+
 	document.querySelector("#selector-0").classList.add("selected");
+
 	intro_animations(first_section);
 }
 
