@@ -17,12 +17,27 @@ function number_sections(){
 	});
 }
 
+window.selector_elements = ["beetle", "fly", "ladybird", "sun", "worm", "butterfly", "secateurs", "woodlouse"];
+
 function setup_section_selectors(){
 	let sections = document.querySelectorAll(".section");
 	let section_selector_container = document.querySelector("#section-selector-container");
 
 	sections.forEach(function(current_section, index, all_sections){
 		let section_selector = document.createElement("div");
+
+		/*
+
+		let player = document.createElement("lottie-player");
+		let img = window.selector_elements[Math.floor(Math.random()*window.selector_elements.length)];
+		player.src = "./animations/elements/" + img + ".json";
+		player.classList.add("selector-animation");
+		player.loop = "true";
+
+		section_selector.appendChild(player);
+
+		*/
+
 		section_selector.classList.add("section-selector")
 		section_selector.id = "selector-" + index;
 		section_selector.dataset.selectorNumber = index;
@@ -35,11 +50,11 @@ function setup_section_selectors(){
 }
 
 function intro_animations(target_section){
-	let elements = target_section.querySelectorAll(".section-content img");
+	let elements = target_section.querySelectorAll(".section-content .enter");
 
 	anime({
 		targets: elements,
-		translateY: [-1000, 0],
+		translateY: [-500, 0],
 		opacity: [0, 1],
 		easing: "easeOutQuart",
 		delay: anime.stagger(400, {start: 400})
@@ -55,6 +70,9 @@ function start_first_slide(){
 	first_section.classList.add("active");
 
 	document.querySelector("#selector-0").classList.add("selected");
+	document.querySelectorAll(".section-selector lottie-player").forEach(function(elem, index){
+		elem.play();
+	});
 
 	intro_animations(first_section);
 }
@@ -129,11 +147,9 @@ function setup_wheel_transitions(){
 	window.addEventListener("wheel", function(){
 		if(transitioning){ return; }
 		if(event.deltaY > 50){
-			console.log("wheel next");
 			next_slide();
 		}
 		if(event.deltaY < 50){
-			console.log("wheel prev");
 			prev_slide();
 		}
 	});
@@ -143,8 +159,6 @@ function next_slide(){
 	// check bounds
 	let num_sections = document.querySelectorAll(".section-selector").length;
 	let next_section_num = window.current_slide + 1;
-	console.log("next slide");
-	console.log(next_section_num);
 	if(next_section_num < num_sections){
 		// simulate a click on the next section
 		document.querySelector("#selector-" + next_section_num).click();
@@ -155,7 +169,6 @@ function prev_slide(){
 	// check bounds
 	let next_section_num = window.current_slide - 1;
 	if(next_section_num >= 0){
-		console.log(next_section_num);
 		// simulate a click on the next section
 		document.querySelector("#selector-" + next_section_num).click();
 	}
@@ -166,7 +179,7 @@ function setup_colors(){
 	let starting_hue = 220;
 	let delta_hue = 20;
 
-	let sections = document.querySelectorAll(".spacer, .section");
+	let sections = document.querySelectorAll(".spacer, .section-background");
 
 	let colors = Array.from(sections).map(function(section, index, all_sections){
 		let hue = starting_hue + (index*delta_hue);
@@ -179,8 +192,6 @@ function setup_colors(){
 
 	colors[0] = "hsl(181, 100%, 90%)";
 	colors[1] = "hsl(200, 100%, 70%)"
-
-	console.log(colors);
 
 	sections.forEach(function(current_section, index){
 
