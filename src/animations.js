@@ -6,8 +6,8 @@ window.addEventListener("DOMContentLoaded", function(event){
 	setup_wheel_transitions();
 });
 
-
 window.current_slide = 0;
+window.transitioning = false;
 
 function number_sections(){
 	let sections = document.querySelectorAll(".section");
@@ -41,8 +41,11 @@ function start_first_slide(){
 }
 
 function slide_transition(event){
+
+	window.transitioning = true;
+
 	let target_selector = event.target;
-	let target_index = target_selector.dataset.selectorNumber;
+	let target_index = parseInt(target_selector.dataset.selectorNumber);
 
 	let target_section = document.querySelector("#section-" + target_index);
 
@@ -86,36 +89,56 @@ function slide_transition(event){
 
 
 		// update current slide
-		window.current_slide = target_index;
+		window.current_slide = parseInt(target_index);
+		window.transitioning = false;
 	}, 300);
 	
 }
 
 function setup_wheel_transitions(){
 	window.addEventListener("swiped-up", function(){
+		if(transitioning){ return; }
 		next_slide();
 	});
 
 	window.addEventListener("swiped-down", function(){
+		if(transitioning){ return; }
 		prev_slide();
 	});
 
 	window.addEventListener("wheel", function(){
+		if(transitioning){ return; }
 		if(event.deltaY > 50){
+			console.log("wheel next");
 			next_slide();
 		}
-		if(event.deltaY > 50){
+		if(event.deltaY < 50){
+			console.log("wheel prev");
 			prev_slide();
 		}
 	});
 }
 
 function next_slide(){
-
+	// check bounds
+	let num_sections = document.querySelectorAll(".section-selector").length;
+	let next_section_num = window.current_slide + 1;
+	console.log("next slide");
+	console.log(next_section_num);
+	if(next_section_num < num_sections){
+		// simulate a click on the next section
+		document.querySelector("#selector-" + next_section_num).click();
+	}
 }
 
 function prev_slide(){
-
+	// check bounds
+	let next_section_num = window.current_slide - 1;
+	if(next_section_num >= 0){
+		console.log(next_section_num);
+		// simulate a click on the next section
+		document.querySelector("#selector-" + next_section_num).click();
+	}
 }
 
 function setup_colors(){

@@ -2,6 +2,7 @@ body{
 	margin: 0;
 	height: 100vh;
 	overflow: hidden;
+	touch-action: none;
 }
 
 #section-selector-container{
@@ -29,7 +30,10 @@ body{
 }
 
 #sections-container{
+	position: relative;
 	height: 100%;
+	width: 100vw;
+	touch-action: none;
 }
 
 .spacer{
