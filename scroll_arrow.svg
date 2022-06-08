@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.9625879"
-     inkscape:cx="265.72058"
-     inkscape:cy="380.6199"
+     inkscape:cx="245.33933"
+     inkscape:cy="364.82442"
      inkscape:window-width="1916"
      inkscape:window-height="1037"
      inkscape:window-x="0"
@@ -55,7 +55,8 @@
        x1="73.889465"
        y1="82.722015"
        x2="73.889465"
-       y2="159.76628" />
+       y2="159.76628"
+       gradientTransform="translate(0,11.641667)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient6534"
@@ -64,7 +65,8 @@
        x1="73.889465"
        y1="82.722015"
        x2="73.889465"
-       y2="159.76628" />
+       y2="159.76628"
+       gradientTransform="translate(0,1.0583327)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient6534"
@@ -73,7 +75,8 @@
        x1="73.889465"
        y1="82.722015"
        x2="73.889465"
-       y2="159.76628" />
+       y2="159.76628"
+       gradientTransform="translate(0,-9.5249993)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient6534"
@@ -82,7 +85,8 @@
        x1="73.889465"
        y1="82.722015"
        x2="73.889465"
-       y2="159.76628" />
+       y2="159.76628"
+       gradientTransform="translate(0,-21.166667)" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -93,31 +97,31 @@
        style="opacity:1;fill:#00ff25;fill-opacity:1"
        transform="translate(3.2498414,-14.126773)">
       <path
-         style="fill:url(#linearGradient7217);fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 44.299643,133.92156 v 9.96972 l 29.589824,15.875 29.589823,-15.875 v -9.96972 l -29.589823,15.875 z"
+         style="fill:url(#linearGradient7217);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 44.299643,145.56324 v 9.96972 l 29.589824,15.875 29.589823,-15.875 v -9.96972 l -29.589823,15.875 z"
          id="path3498"
-         inkscape:export-filename="/home/simon/Work/chc/gardening/src/static assets/scroll_arrow_1.png"
+         inkscape:export-filename="/home/simon/Work/chc/gardening/src/static_assets/scroll_arrow_1.png"
          inkscape:export-xdpi="85.459999"
          inkscape:export-ydpi="85.459999" />
       <path
-         style="fill:url(#linearGradient7219);fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 44.299643,117.16461 v 9.96972 l 29.589824,15.875 29.589823,-15.875 v -9.96972 l -29.589823,15.875 z"
+         style="fill:url(#linearGradient7219);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 44.299643,118.22292 v 9.96972 l 29.589824,15.875 29.589823,-15.875 v -9.96972 l -29.589823,15.875 z"
          id="path6512"
-         inkscape:export-filename="/home/simon/Work/chc/gardening/src/static assets/scroll_arrow_2.png"
+         inkscape:export-filename="/home/simon/Work/chc/gardening/src/static_assets/scroll_arrow_2.png"
          inkscape:export-xdpi="85.459999"
          inkscape:export-ydpi="85.459999" />
       <path
-         style="fill:url(#linearGradient7221);fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 44.299643,100.40766 v 9.96972 l 29.589824,15.875 29.589823,-15.875 v -9.96972 l -29.589823,15.875 z"
+         style="fill:url(#linearGradient7221);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 44.299643,90.88266 v 9.96972 l 29.589824,15.875 29.589823,-15.875 v -9.96972 l -29.589823,15.875 z"
          id="path6516"
-         inkscape:export-filename="/home/simon/Work/chc/gardening/src/static assets/scroll_arrow_3.png"
+         inkscape:export-filename="/home/simon/Work/chc/gardening/src/static_assets/scroll_arrow_3.png"
          inkscape:export-xdpi="85.459999"
          inkscape:export-ydpi="85.459999" />
       <path
-         style="fill:url(#linearGradient7223);fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 44.299643,83.650722 v 9.969714 L 73.889467,109.49543 103.47929,93.620436 V 83.650722 L 73.889467,99.525713 Z"
+         style="fill:url(#linearGradient7223);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 44.299643,62.484054 v 9.969714 L 73.889467,88.328759 103.47929,72.453768 V 62.484054 L 73.889467,78.359045 Z"
          id="path6520"
-         inkscape:export-filename="/home/simon/Work/chc/gardening/src/static assets/scroll_arrow_4.png"
+         inkscape:export-filename="/home/simon/Work/chc/gardening/src/static_assets/scroll_arrow_4.png"
          inkscape:export-xdpi="85.459999"
          inkscape:export-ydpi="85.459999" />
     </g>
