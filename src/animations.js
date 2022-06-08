@@ -135,6 +135,9 @@ function slide_transition(event){
 	let target_index = parseInt(target_selector.dataset.selectorNumber);
 
 	let target_section = document.querySelector("#section-" + target_index);
+	if(target_section === null){
+		return;
+	}
 
 	// are we already on the current slide?
 	if (target_section.classList.contains("active")){
