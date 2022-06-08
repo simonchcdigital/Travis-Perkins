@@ -177,7 +177,7 @@ body{
 
 .bushes{
 	position: absolute;
-	width: calc(min(1920px, calc(1.8 * 100vh)));
+	width: calc(min(1950px, calc(1.85 * 100vh)));
 	height: 100vh;
 	display: flex;
 	justify-content: space-between;
