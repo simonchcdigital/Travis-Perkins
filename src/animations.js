@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function(event){
 	number_sections();
 	setup_section_selectors();
-	setup_colors();
+	//setup_colors();
 	setup_wheel_transitions();
 	start_first_slide();
 });
@@ -88,6 +88,19 @@ function start_first_slide(){
 	intro_animations(first_section);
 }
 
+window.target_scroll_position = 0;
+
+function smooth_scroll(){
+	let target_scroll_position = window.target_scroll_position;
+	let element = document.querySelector("#sections-container");
+	if(Math.abs(element.scrollTop - target_scroll_position) < 2){
+		element.scrollTop = target_scroll_position;
+	}else{
+		element.scrollTop = (element.scrollTop + target_scroll_position)*0.5;
+		window.requestAnimationFrame(smooth_scroll);
+	}
+}
+
 function slide_transition(event){
 
 	window.transitioning = true;
@@ -102,8 +115,11 @@ function slide_transition(event){
 		return;
 	}
 
-	// scroll the new section into view
-	target_section.scrollIntoView({block: "start", inline: "nearest", behavior: "smooth"});
+	//target_section.scrollIntoView({block: "start", inline: "nearest", behavior: "smooth"});
+
+	//document.querySelector("#sections-container").scrollTop = target_section.offsetTop;
+	window.target_scroll_position = target_section.offsetTop;
+	smooth_scroll();
 
 	// start the next section's animations
 	let target_animation_player = target_section.querySelector("lottie-player");
