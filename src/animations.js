@@ -4,11 +4,25 @@ window.addEventListener("DOMContentLoaded", function(event){
 	//setup_colors();
 	setup_wheel_transitions();
 	start_first_slide();
+	setup_keyboard_actions();
 });
 
 window.current_slide = 0;
 window.transitioning = false;
 
+
+function setup_keyboard_actions(){
+	document.addEventListener('keydown', function(event) {
+		if(event.keyCode == 40) { // down
+			next_slide();
+		}
+		else if(event.keyCode == 38) { // up
+			prev_slide();
+		} else if(event.keyCode == 32) { // space
+			next_slide();
+		}
+	});
+}
 function number_sections(){
 	let sections = document.querySelectorAll(".section");
 	sections.forEach(function(sec, i){
