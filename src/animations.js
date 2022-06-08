@@ -26,18 +26,6 @@ function setup_section_selectors(){
 	sections.forEach(function(current_section, index, all_sections){
 		let section_selector = document.createElement("div");
 
-		/*
-
-		let player = document.createElement("lottie-player");
-		let img = window.selector_elements[Math.floor(Math.random()*window.selector_elements.length)];
-		player.src = "./animations/elements/" + img + ".json";
-		player.classList.add("selector-animation");
-		player.loop = "true";
-
-		section_selector.appendChild(player);
-
-		*/
-
 		section_selector.classList.add("section-selector")
 		section_selector.id = "selector-" + index;
 		section_selector.dataset.selectorNumber = index;
@@ -50,15 +38,38 @@ function setup_section_selectors(){
 }
 
 function intro_animations(target_section){
-	let elements = target_section.querySelectorAll(".section-content .enter");
+	let entrance_elements = target_section.querySelectorAll(".section-content .enter");
 
 	anime({
-		targets: elements,
+		targets: entrance_elements,
 		translateY: [-500, 0],
 		opacity: [0, 1],
 		easing: "easeOutQuart",
 		delay: anime.stagger(400, {start: 400})
 	});
+
+	let scroll_indicator_elements = target_section.querySelectorAll(".section-content .scroll-arrow");
+
+	// have them animate in staggered
+	anime({
+		targets: scroll_indicator_elements,
+		translateY: [-200, 0],
+		opacity: [0, 1],
+		easing: "easeOutCubic",
+		delay: anime.stagger(100, {start: 1500})
+	});
+
+	// make them bounce a little
+	/*
+	anime({
+		targets: scroll_indicator_elements,
+		translateY: "1px",
+		direction: "alternate",
+		loop: true,
+		easing: "easeInOutSine",
+		delay: anime.stagger(50)
+	});
+	*/
 }
 
 function start_first_slide(){

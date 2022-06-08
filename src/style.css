@@ -69,6 +69,11 @@ body{
 	height: min(100vw, 100vh);
 	width: min(100vw, 100vh);
 	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 20px 0;
 	z-index: 200;
 }
 
@@ -87,8 +92,10 @@ body{
 	overflow: hidden;
 }
 
-.selector-animation{
-	pointer-events: none;
+.scroll-arrow{
+	position: relative;
+	margin-top: -20px;
+	width: 100px;
 }
 
 .animated-sprite{
@@ -97,3 +104,4 @@ body{
 	width: 20px;
 	background-color: blue;
 }
+
