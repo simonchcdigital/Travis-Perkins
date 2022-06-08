@@ -9,7 +9,7 @@ body{
 
 #section-selector-container{
 	position: fixed;
-	width: 50px;
+	width: 70px;
 	right: 0;
 	height: 100%;
 	display: flex;
@@ -23,12 +23,24 @@ body{
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
+	/*
 	background-color: rgb(100,100,100);
 	transition: background-color 0.5s;
+	*/
+
+}
+.section-selector img{
+	filter: drop-shadow(0 0 0px black) opacity(50%) hue-rotate(-70deg);
+	transition: filter 0.5s;
+}
+.section-selector.selected img{
+	filter: drop-shadow(0 0 5px black) opacity(100%) hue-rotate(0deg);
 }
 
 .section-selector.selected{
+	/*
 	background-color: rgb(255, 255, 255);
+	*/
 }
 
 #sections-container{

@@ -32,6 +32,32 @@ function setup_section_selectors(){
 		
 		section_selector.addEventListener("click", slide_transition);
 
+
+
+		let leaf_img = document.createElement("img");
+		leaf_img.src = "./static_assets/leaf.svg";
+		leaf_img.style.position = "relative";
+		leaf_img.addEventListener("click", function(event){
+			event.preventDefault();
+			event.target.parentElement.click();
+		});
+
+		let rotation = - 45 + (index % 2)*90;
+
+		let nudge = 10;
+
+		if(index%2 != 0){
+			leaf_img.style.left = nudge + "px";
+		}else{
+			leaf_img.style.left = -1*nudge + "px";
+		}
+		
+		leaf_img.style.transform = "rotate("+rotation+"deg)";
+
+		leaf_img.classList.add("selector-img");
+		
+		section_selector.appendChild(leaf_img);
+
 		section_selector_container.appendChild(section_selector);
 
 	});
