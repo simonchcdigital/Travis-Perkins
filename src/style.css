@@ -30,7 +30,7 @@ body{
 
 }
 .section-selector img{
-	filter: drop-shadow(0 0 0px black) opacity(50%) hue-rotate(-70deg);
+	filter: drop-shadow(0 0 0px black) opacity(70%) hue-rotate(-70deg);
 	transition: filter 0.5s;
 }
 .section-selector.selected img{
