@@ -3,6 +3,8 @@ body{
 	height: 100vh;
 	overflow: hidden;
 	touch-action: none;
+	font-family: lato, sans-serif;
+	font-size: 10pt;
 }
 
 #section-selector-container{
@@ -113,7 +115,36 @@ body{
 	align-items: center;
 }
 
+#footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #1c2837;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+#footer a{
+	color: white;
+	padding: 3px;
+	text-decoration: none;
+}
+
+
 #header a{
 	color: white;
+	padding: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#header a img{
+	height: 15px;
 	padding: 10px;
 }
