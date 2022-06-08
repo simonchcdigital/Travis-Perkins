@@ -192,20 +192,21 @@ function slide_transition(event){
 function setup_wheel_transitions(){
 	window.addEventListener("swiped-up", function(){
 		if(transitioning){ return; }
+		console.log("swiped up");
 		next_slide();
 	});
 
 	window.addEventListener("swiped-down", function(){
 		if(transitioning){ return; }
+		console.log("swiped down");
 		prev_slide();
 	});
 
 	window.addEventListener("wheel", function(){
 		if(transitioning){ return; }
-		if(event.deltaY > 50){
+		if(event.deltaY > 10){
 			next_slide();
-		}
-		if(event.deltaY < 50){
+		}else if(event.deltaY < 10){
 			prev_slide();
 		}
 	});
