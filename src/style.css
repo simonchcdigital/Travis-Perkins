@@ -225,6 +225,7 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	z-index: 800;
+	pointer-events: none;
 }
 
 .bush{
@@ -244,4 +245,32 @@ body{
 	background-image: url("static_assets/overlay.jpg");
 	mix-blend-mode: multiply;
 	opacity: 15%;
+}
+
+.tp-button{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 100px;
+	height: 80px;
+	width: 350px;
+	background-color: #faad00;
+	color: #0a4f3b;
+}
+
+.tp-button-icon{
+	height: calc(80px - 10px);
+	width: calc(80px - 10px);
+	margin: 5px;
+	border-radius: 100px;
+	background-color: white;
+}
+
+div.tp-button-content{
+	text-align: center;
+	font-size: 14pt;
+	flex: 2;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: lato, sans-serif;
 }
