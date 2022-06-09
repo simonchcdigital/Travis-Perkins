@@ -106,7 +106,8 @@ body{
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	gap: 20px 0;
+	/*gap: 20px 0;*/
+	text-align: center;
 	z-index: 200;
 }
 
