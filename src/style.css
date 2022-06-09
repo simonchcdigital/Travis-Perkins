@@ -131,9 +131,24 @@ body{
 	width: 100px;
 }
 
+
 .block{
-	margin-top: 50px;
+	margin-top: -50px;
+	padding: 20px;
 }
+
+@media screen and (min-width: 768px) {
+	#section-0 .block{
+		margin: 0;
+		padding: 90px 90px 0 90px;
+	}
+
+	.block{
+		margin: 0;
+		padding: 60px 90px 0 90px;
+	}
+}
+
 
 #header{
 	position: absolute;
