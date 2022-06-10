@@ -132,20 +132,30 @@ body{
 }
 
 
+/* mobile */
 .block{
 	margin-top: -50px;
 	padding: 20px;
 }
 
-@media screen and (min-width: 768px) {
-	#section-0 .block{
-		margin: 0;
-		padding: 90px 90px 0 90px;
-	}
+#section-0 .block.subtitle{
+	margin-top: -60px;
+}
 
+/* not mobile */
+@media screen and (min-width: 768px) {
 	.block{
 		margin: 0;
 		padding: 60px 90px 0 90px;
+	}
+
+	#section-0 .block.title{
+		margin: 0;
+		padding: 90px 90px 0 90px;
+	}
+	#section-0 .block.subtitle{
+		margin-top: -60px;
+		padding: 0px 90px 0 90px;
 	}
 }
 
