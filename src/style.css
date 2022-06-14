@@ -311,7 +311,7 @@ div.tp-button-content{
 .tp-button{
 	position: absolute;
 	bottom: -50px;
-	left: 10px;
+	left: 10%;
 }
 
 /* not mobile */
@@ -337,6 +337,6 @@ div.tp-button-content{
 	.tp-button{
 		position: absolute;
 		bottom: 10px;
-		left: 10px;
+		left: 10%;
 	}
 }
