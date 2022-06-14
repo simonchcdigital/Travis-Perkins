@@ -102,12 +102,19 @@ body{
 	height: min(100vw, 100vh);
 	width: min(100vw, 100vh);
 	margin: auto;
+	text-align: center;
+	/*
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
+	*/
 	z-index: 200;
+}
+
+.section-content > *{
+	margin: auto;
 }
 
 .section-content.background{
@@ -128,6 +135,7 @@ body{
 .scroll-arrow{
 	position: relative;
 	margin-top: -20px;
+	display: block;
 	width: 100px;
 }
 
