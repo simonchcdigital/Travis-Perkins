@@ -339,4 +339,7 @@ div.tp-button-content{
 		bottom: 10px;
 		left: 10%;
 	}
+	.tp-button.last-button{
+		bottom: 50px;
+	}
 }
