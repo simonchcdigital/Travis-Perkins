@@ -128,6 +128,10 @@ body{
 	transform: scale(1.78);
 	max-height: 1920px;
 	max-width: 1920px;
+	/*
+	max-height: 1080px;
+	max-width: 1080px;
+	*/
 	pointer-events: none;
 	overflow: hidden;
 }
