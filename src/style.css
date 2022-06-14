@@ -144,6 +144,7 @@ body{
 .block{
 	margin-top: -50px;
 	padding: 20px;
+	max-width: 80%;
 }
 
 #section-0 .block.subtitle{
