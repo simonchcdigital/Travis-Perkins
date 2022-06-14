@@ -140,47 +140,6 @@ body{
 }
 
 
-/* mobile */
-.block{
-	margin-top: -50px;
-	padding: 20px;
-	max-width: 80%;
-}
-
-#section-0 .block.subtitle{
-	margin-top: -60px;
-}
-
-/* not mobile */
-@media screen and (min-width: 768px) {
-	.block{
-		margin: 0;
-		padding: 60px 90px 0 90px;
-	}
-
-	#section-0 .block.title{
-		margin: 0;
-		padding: 90px 90px 0 90px;
-	}
-	#section-0 .block.subtitle{
-		margin-top: -60px;
-		padding: 0px 90px 0 90px;
-	}
-}
-
-/* mobile */
-#section-16 .block.subtitle{
-	margin-top: -60px;
-}
-
-/* not mobile */
-@media screen and (min-width: 768px) {
-	#section-16 .block.subtitle{
-		margin-top: -100px;
-	}
-}
-
-
 
 #header{
 	position: absolute;
@@ -289,6 +248,9 @@ body{
 	width: 250px;
 	background-color: #faad00;
 	color: #0a4f3b;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
 }
 
 .tp-button-icon{
@@ -328,4 +290,53 @@ div.tp-button-content{
 	/*text-transform: uppercase;*/
 	font-family: lato, sans-serif;
 	border: none;
+}
+
+/* mobile */
+.block{
+	margin-top: -50px;
+	padding: 20px;
+	max-width: 80%;
+}
+
+#section-0 .block.subtitle{
+	margin-top: -60px;
+}
+
+/* mobile */
+#section-16 .block.subtitle{
+	margin-top: -60px;
+}
+
+.tp-button{
+	position: absolute;
+	bottom: -50px;
+	left: 10px;
+}
+
+/* not mobile */
+@media screen and (min-width: 768px) {
+	.block{
+		margin: 0;
+		padding: 60px 90px 0 90px;
+	}
+
+	#section-0 .block.title{
+		margin: 0;
+		padding: 90px 90px 0 90px;
+	}
+	#section-0 .block.subtitle{
+		margin-top: -60px;
+		padding: 0px 90px 0 90px;
+	}
+
+	#section-16 .block.subtitle{
+		margin-top: -100px;
+	}
+
+	.tp-button{
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+	}
 }
