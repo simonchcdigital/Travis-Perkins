@@ -17,6 +17,7 @@ section{
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	background-size: cover;
 }
 
 nav{
@@ -56,4 +57,41 @@ nav > div.nav-item{
 	margin: 10px;
 	background-color: rgba(0,0,0,0.3);
 	transition: background-color 0.2s;
+}
+
+
+.bg1{
+	background-image: url("https://www.technocrazed.com/wp-content/uploads/2015/12/Windows-XP-wallpaper-23.jpg");
+}
+
+.bg2{
+	background-image: url("https://million-wallpapers.com/wallpapers/1/54/13843827691841665276/windows-logo-reflected-on-a-green-meadow-illuminated-by-the-rays-of-the-sun-through-the-clouds.jpg");
+}
+
+.bg3{
+	background-image: url("https://getwallpapers.com/wallpaper/full/4/b/a/1253345-screensavers-and-wallpaper-windows-10-3840x2160-full-hd.jpg");
+}
+
+.bg4{
+	background-image: url("https://hddesktopwallpapers.in/wp-content/uploads/2015/08/sunset-sky-wallpaper.jpg");
+}
+
+.bg5{
+	background-image: url("https://assets.wallpapersin4k.org/uploads/2017/04/Windows-Wallpaper-9.jpeg");
+}
+
+.bg6{
+	background-image: url("https://assets.wallpapersin4k.org/uploads/2017/04/Nature-Windows-Wallpaper-12.jpg");
+}
+
+.bg7{
+	background-image: url("https://4.bp.blogspot.com/-ncJHBYpcrTM/VEKnh1AHrLI/AAAAAAAAA6A/W5qI96Y_mWU/s1600/Lighthouse%2BWallpapers%2B(2).jpg");
+}
+
+.bg8{
+	background-image: url("https://wallpaperheart.com/wp-content/uploads/2018/08/hd-desktop-wallpaper-9.jpg");
+}
+
+.bg9{
+	background-image: url("https://getwallpapers.com/wallpaper/full/5/5/7/710295-free-download-scenic-desktop-wallpapers-3072x2048-iphone.jpg");
 }

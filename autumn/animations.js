@@ -297,7 +297,7 @@ function transition(event){
 
 	let d = ["up", "down", "left", "right"]
 	let di = Math.floor(Math.random()*d.length);
-	wipe_reveal(section, direction = d[di], gradient_width = 1500, duration = 1300)
+	wipe_reveal(section, direction = d[di], gradient_width = 800, duration = 1300)
 		.then(done_transition);
 
 	vine();
