@@ -21,26 +21,6 @@ window.addEventListener("DOMContentLoaded", function(event){
 	document.querySelector("#nav-item-0").click();
 });
 
-function vine(){
-	console.log("vining");
-	let path = document.querySelector("#vine_path");
-	let len = anime.setDashoffset(path);
-	path.style["stroke-dasharray"] = len;
-
-	let progress = 1 - (window.current_section/(window.num_sections-1));
-
-	let path_len = progress * parseInt(len);
-
-	console.log("progress: ", progress);
-	console.log("path length: ", path_len);
-
-	anime({
-		targets: "#vine_path",
-		strokeDashoffset: path_len,
-		easing: 'easeInOutQuad',
-		duration: 800,
-	});
-}
 
 
 function cssProp(css_name){
@@ -232,6 +212,27 @@ function wipe_reveal(section, direction = "down", gradient_width = 200, duration
 
 	
 	return wipe.finished;
+}
+
+function vine(){
+	console.log("vining");
+	let path = document.querySelector("#vine_path");
+	let len = anime.setDashoffset(path);
+	path.style["stroke-dasharray"] = len;
+
+	let progress = (window.current_section/(window.num_sections-1));
+
+	let path_len = progress * parseInt(len);
+
+	console.log("progress: ", progress);
+	console.log("path length: ", path_len);
+
+	anime({
+		targets: "#vine_path",
+		strokeDashoffset: path_len,
+		easing: 'easeInOutQuad',
+		duration: 800,
+	});
 }
 
 function do_entrance_animations(section){
