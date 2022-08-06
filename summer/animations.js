@@ -3,12 +3,25 @@ window.addEventListener("DOMContentLoaded", function(event){
 	setup_section_selectors();
 	//setup_colors();
 	setup_wheel_transitions();
-	start_first_slide();
 	setup_keyboard_actions();
+	setup_anchors();
+	start_first_slide();
 });
 
 window.current_slide = 0;
 window.transitioning = false;
+
+
+function setup_anchors(){
+	window.addEventListener("popstate", function(){
+		let slide = window.location.hash.match(/-(\d+)/)[1];
+		let num_sections = document.querySelectorAll(".section-selector").length;
+		if(slide < num_sections && slide >= 0){
+			// simulate a click on the next section
+			document.querySelector("#selector-" + slide).click();
+		}
+	});
+}
 
 
 function setup_keyboard_actions(){
@@ -114,13 +127,21 @@ function intro_animations(target_section){
 
 function start_first_slide(){
 
-	let first_section = document.querySelector("#section-0");
+	let slide = 0;
+	if(window.location.hash != ""){
+		let num_sections = document.querySelectorAll(".section-selector").length;
+		if(slide < num_sections && slide >= 0){
+			slide = window.location.hash.match(/-(\d+)/)[1];
+		}
+	}
+
+	let first_section = document.querySelector("#section-" + slide);
 	first_section.scrollIntoView();
 
 	first_section.querySelector("lottie-player").play();
 	first_section.classList.add("active");
 
-	document.querySelector("#selector-0").classList.add("selected");
+	document.querySelector("#selector-"+ slide).classList.add("selected");
 	document.querySelectorAll(".section-selector lottie-player").forEach(function(elem, index){
 		elem.play();
 	});
@@ -130,13 +151,23 @@ function start_first_slide(){
 
 window.target_scroll_position = 0;
 
+// TODO fix this shit
 function smooth_scroll(){
 	let target_scroll_position = window.target_scroll_position;
+
 	let element = document.querySelector("#sections-container");
-	if(Math.abs(element.scrollTop - target_scroll_position) < 2){
+	let element_scroll_position = element.scrollTop;
+
+	let scroll_diff = target_scroll_position - element_scroll_position;
+
+	//console.log(scroll_diff);
+
+	let scroll_factor = 0.2;
+
+	if(Math.abs(element_scroll_position - target_scroll_position) < 10){
 		element.scrollTop = target_scroll_position;
 	}else{
-		element.scrollTop = (element.scrollTop + target_scroll_position)*0.5;
+		element.scrollTop = element_scroll_position + Math.round(scroll_diff*scroll_factor);
 		window.requestAnimationFrame(smooth_scroll);
 	}
 }

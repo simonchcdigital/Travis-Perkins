@@ -1,0 +1,574 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div dir="ltr">Hi&nbsp;Michael<br>
+<br>
+The issue with leaf images appears because these images are not present in the initial HTML response. Images are created programmatically.<br>
+<img src="cid:ii_l5v58qvr3" alt="image.png" width="562" height="337"><br>
+Website transforms relative image URLs by adding a Hippo CMS domain prefix. In this case it would be&nbsp;<a href="https://api-content-uat1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg">https://api-content-uat1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg</a>
+<div><br>
+<div>In order to fix the issue you may:<br>
+- Add these images to the index.html file. In this case website would automatically transform URLs<br>
+or<br>
+- Create a URL programmatically by adding prefix. Keep in mind that this prefix would be different for staging and production environments.<br>
+&nbsp; &nbsp;UAT - <a href="https://api-content-uat1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg">
+https://api-content-uat1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg</a><br>
+&nbsp; &nbsp;CAND - <a href="https://api-content-cand1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg">
+https://api-content-cand1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg</a><br>
+&nbsp; &nbsp;PROD - <a href="https://api.content.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg">
+https://api.content.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg</a><br>
+<br>
+Thanks,<br>
+Nikita</div>
+</div>
+</div>
+<br>
+<div class="gmail_quote">
+<div dir="ltr" class="gmail_attr">On Thu, 21 Jul 2022 at 16:29, Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com">Michael.Gifford-Ross@walk-in-media.com</a>&gt; wrote:<br>
+</div>
+<blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+<div lang="EN-GB" style="overflow-wrap: break-word;">
+<div class="gmail-m_2742688731589587225WordSection1">
+<p class="MsoNormal"><span>Great, thanks, good to know. I take it when we do publish that we can whenever and it should be in hippo cms production?<u></u><u></u></span></p>
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+<p class="MsoNormal"><span>Regards,<u></u><u></u></span></p>
+<p class="MsoNormal"><span>Michael<u></u><u></u></span></p>
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+<br>
+<br>
+<div style="font-family:tahoma,Arial,sans-serif,&quot;Open Sans&quot;;font-size:11pt;text-align:left">
+<span style="color:rgb(42,28,101)"><b>Michael Gifford-Ross</b><br>
+</span><span style="color:rgb(42,28,101)">Head of SEO<br>
+</span><span style="color:rgb(255,131,65)">-------------------<br>
+Walk-In Media<br>
+M: 07712275736<br>
+</span></div>
+<br>
+<br>
+<div style="border-right:none;border-bottom:none;border-left:none;border-top:1pt solid rgb(225,225,225);padding:3pt 0cm 0cm">
+<p class="MsoNormal"><b><span lang="EN-US">From:</span></b><span lang="EN-US"> Nikita Lakisov &lt;<a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank">nikita.lakisov@travisperkins.co.uk</a>&gt;
+<br>
+<b>Sent:</b> 21 July 2022 14:26<br>
+<b>To:</b> Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt;<br>
+<b>Cc:</b> Nicola Woodstock &lt;<a href="mailto:nicola.woodstock@travisperkins.co.uk" target="_blank">nicola.woodstock@travisperkins.co.uk</a>&gt;; Peter Shorney &lt;<a href="mailto:Peter.Shorney@walk-in-media.com" target="_blank">Peter.Shorney@walk-in-media.com</a>&gt;;
+ Andrey Gaevskiy &lt;<a href="mailto:andrey.gaevskiy@travisperkins.co.uk" target="_blank">andrey.gaevskiy@travisperkins.co.uk</a>&gt;<br>
+<b>Subject:</b> Re: Microsite upload<u></u><u></u></span></p>
+</div>
+<p class="MsoNormal"><u></u>&nbsp;<u></u></p>
+<div>
+<p class="MsoNormal">Hi&nbsp;Michael<br>
+<br>
+You may unpublish it. But it is not necessary, as it was published on the UAT environment<br>
+<br>
+Thanks,<br>
+Nikita<u></u><u></u></p>
+</div>
+<p class="MsoNormal"><u></u>&nbsp;<u></u></p>
+<div>
+<div>
+<p class="MsoNormal">On Thu, 21 Jul 2022 at 15:30, Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt; wrote:<u></u><u></u></p>
+</div>
+<blockquote style="border-top:none;border-right:none;border-bottom:none;border-left:1pt solid rgb(204,204,204);padding:0cm 0cm 0cm 6pt;margin-left:4.8pt;margin-right:0cm">
+<div>
+<div>
+<p class="MsoNormal">Should we just unpublish the bundle that we’ve created for now then?<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal">Regards,<br>
+Michael<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal" style="margin-bottom:12pt"><u></u>&nbsp;<u></u></p>
+<p class="MsoNormal"><b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)">Michael Gifford-Ross</span></b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)"><br>
+Head of SEO<br>
+</span><span style="font-family:Tahoma,sans-serif;color:rgb(255,131,65)">-------------------<br>
+Walk-In Media<br>
+M: 07712275736</span><span style="font-family:Tahoma,sans-serif"><u></u><u></u></span></p>
+<p class="MsoNormal" style="margin-bottom:12pt"><u></u>&nbsp;<u></u></p>
+<div style="border-right:none;border-bottom:none;border-left:none;border-top:1pt solid rgb(225,225,225);padding:3pt 0cm 0cm">
+<p class="MsoNormal"><b><span lang="EN-US">From:</span></b><span lang="EN-US"> Nikita Lakisov &lt;<a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank">nikita.lakisov@travisperkins.co.uk</a>&gt;
+<br>
+<b>Sent:</b> 21 July 2022 11:15<br>
+<b>To:</b> Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt;<br>
+<b>Cc:</b> Nicola Woodstock &lt;<a href="mailto:nicola.woodstock@travisperkins.co.uk" target="_blank">nicola.woodstock@travisperkins.co.uk</a>&gt;; Peter Shorney &lt;<a href="mailto:Peter.Shorney@walk-in-media.com" target="_blank">Peter.Shorney@walk-in-media.com</a>&gt;;
+ Andrey Gaevskiy &lt;<a href="mailto:andrey.gaevskiy@travisperkins.co.uk" target="_blank">andrey.gaevskiy@travisperkins.co.uk</a>&gt;<br>
+<b>Subject:</b> Re: Microsite upload</span><u></u><u></u></p>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<p class="MsoNormal">Hi&nbsp;Michael<br>
+<br>
+We may release to production microsite integration code if there is no issue with the integration itself.
+<br>
+It would not automatically publish new microsite pages. It would just give you the possibility to publish new microsite pages when bundles are ready.<br>
+Do you have any concerns?<br>
+<br>
+Thanks,<br>
+Nikita<u></u><u></u></p>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<div>
+<p class="MsoNormal">On Thu, 21 Jul 2022 at 11:11, Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt; wrote:<u></u><u></u></p>
+</div>
+<blockquote style="border-top:none;border-right:none;border-bottom:none;border-left:1pt solid rgb(204,204,204);padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt">
+<div>
+<p class="MsoNormal">Thank Nikita, <u></u><u></u></p>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">We will take this to CHC and revert. For the time-being can we not release to production. Hopefully we will have fixed the issues in time for next week’s release.<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal" style="margin-bottom:12pt">M<u></u><u></u></p>
+<div>
+<p class="MsoNormal">Sent from my iPhone<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal" style="margin-bottom:12pt"><u></u>&nbsp;<u></u></p>
+<blockquote style="margin-top:5pt;margin-bottom:5pt">
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal"><b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)">Michael Gifford-Ross</span></b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)"><br>
+Head of SEO<br>
+</span><span style="font-family:Tahoma,sans-serif;color:rgb(255,131,65)">-------------------<br>
+Walk-In Media<br>
+M: 07712275736</span><u></u><u></u></p>
+<p class="MsoNormal" style="margin-bottom:12pt"><br>
+<br>
+On 21 Jul 2022, at 09:04, Nikita Lakisov &lt;<a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank">nikita.lakisov@travisperkins.co.uk</a>&gt; wrote:<u></u><u></u></p>
+</blockquote>
+</div>
+<blockquote style="margin-top:5pt;margin-bottom:5pt">
+<div>
+<p class="MsoNormal">﻿ <u></u><u></u></p>
+<div>
+<p class="MsoNormal">Hi Michael<br>
+<br>
+If you mean scrolling on the microsite page - it is controlled by the microsite bundle. Website scripts do not affect anything on this page<br>
+<br>
+Thanks,<br>
+Nikita<u></u><u></u></p>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<div>
+<p class="MsoNormal">On Wed, 20 Jul 2022 at 18:44, Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt; wrote:<u></u><u></u></p>
+</div>
+<blockquote style="border-top:none;border-right:none;border-bottom:none;border-left:1pt solid rgb(204,204,204);padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt">
+<div>
+<div>
+<p class="MsoNormal">Hi Nikita,<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal">I’ll get back to you but there are some issues that we need to fix. We have reached out to CHC digital to see if this is an issue with the bundle.<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal">I don’t know if you spotted that the scrolling behaviour isn’t working as expected? Can you confirm whether this an issue that needs fixing your end or with CHC Digital (providers of the creative)?<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal">Regards,<u></u><u></u></p>
+<p class="MsoNormal">Michael<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal"><b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)">Michael Gifford-Ross</span></b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)"><br>
+Head of SEO<br>
+</span><span style="font-family:Tahoma,sans-serif;color:rgb(255,131,65)">-------------------<br>
+Walk-In Media<br>
+M: 07712275736</span><u></u><u></u></p>
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+<div style="border-right:none;border-bottom:none;border-left:none;border-top:1pt solid rgb(225,225,225);padding:3pt 0cm 0cm">
+<p class="MsoNormal"><b><span lang="EN-US">From:</span></b><span lang="EN-US"> Nikita Lakisov &lt;<a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank">nikita.lakisov@travisperkins.co.uk</a>&gt;
+<br>
+<b>Sent:</b> 20 July 2022 16:14<br>
+<b>To:</b> Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt;<br>
+<b>Cc:</b> Nicola Woodstock &lt;<a href="mailto:nicola.woodstock@travisperkins.co.uk" target="_blank">nicola.woodstock@travisperkins.co.uk</a>&gt;; Peter Shorney &lt;<a href="mailto:Peter.Shorney@walk-in-media.com" target="_blank">Peter.Shorney@walk-in-media.com</a>&gt;;
+ Andrey Gaevskiy &lt;<a href="mailto:andrey.gaevskiy@travisperkins.co.uk" target="_blank">andrey.gaevskiy@travisperkins.co.uk</a>&gt;<br>
+<b>Subject:</b> Re: Microsite upload</span><u></u><u></u></p>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<p class="MsoNormal">Hi&nbsp;Michael<br>
+<br>
+Sorry for the late reply. I have a free time today till the end of day. Or tomorrow 11:30....3pm&nbsp;&nbsp;<br>
+<br>
+Thanks,<br>
+Nikita<u></u><u></u></p>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<div>
+<p class="MsoNormal">On Wed, 20 Jul 2022 at 15:52, Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt; wrote:<u></u><u></u></p>
+</div>
+<blockquote style="border-top:none;border-right:none;border-bottom:none;border-left:1pt solid rgb(204,204,204);padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt">
+<div>
+<div>
+<p class="MsoNormal"><a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank"><span style="text-decoration:none">@Nikita Lakisov</span></a> are you free at 2pm, there are some issues with scrolling.<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal">Michael<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal"><b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)">Michael Gifford-Ross</span></b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)"><br>
+Head of SEO<br>
+</span><span style="font-family:Tahoma,sans-serif;color:rgb(255,131,65)">-------------------<br>
+Walk-In Media<br>
+M: 07712275736</span><u></u><u></u></p>
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+<div>
+<div style="border-right:none;border-bottom:none;border-left:none;border-top:1pt solid rgb(225,225,225);padding:3pt 0cm 0cm">
+<p class="MsoNormal"><b><span lang="EN-US">From:</span></b><span lang="EN-US"> Michael Gifford-Ross
+<br>
+<b>Sent:</b> 20 July 2022 13:51<br>
+<b>To:</b> Nicola Woodstock &lt;<a href="mailto:nicola.woodstock@travisperkins.co.uk" target="_blank">nicola.woodstock@travisperkins.co.uk</a>&gt;; Peter Shorney &lt;<a href="mailto:Peter.Shorney@walk-in-media.com" target="_blank">Peter.Shorney@walk-in-media.com</a>&gt;<br>
+<b>Cc:</b> Nikita Lakisov &lt;<a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank">nikita.lakisov@travisperkins.co.uk</a>&gt;; Andrey Gaevskiy &lt;<a href="mailto:andrey.gaevskiy@travisperkins.co.uk" target="_blank">andrey.gaevskiy@travisperkins.co.uk</a>&gt;<br>
+<b>Subject:</b> RE: Microsite upload</span><u></u><u></u></p>
+</div>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal">Hi Nic/Pete,<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal">I have a VPN (whitelisted for UAT). Do you want to jump on a quick call so you can have a look?<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal">Regards,<br>
+Michael<u></u><u></u></p>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div style="border-right:none;border-bottom:none;border-left:none;border-top:1pt solid rgb(225,225,225);padding:3pt 0cm 0cm">
+<p class="MsoNormal"><b><span lang="EN-US">From:</span></b><span lang="EN-US"> Nicola Woodstock &lt;<a href="mailto:nicola.woodstock@travisperkins.co.uk" target="_blank">nicola.woodstock@travisperkins.co.uk</a>&gt;
+<br>
+<b>Sent:</b> 20 July 2022 13:49<br>
+<b>To:</b> Peter Shorney &lt;<a href="mailto:Peter.Shorney@walk-in-media.com" target="_blank">Peter.Shorney@walk-in-media.com</a>&gt;<br>
+<b>Cc:</b> Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt;; Nikita Lakisov &lt;<a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank">nikita.lakisov@travisperkins.co.uk</a>&gt;;
+ Andrey Gaevskiy &lt;<a href="mailto:andrey.gaevskiy@travisperkins.co.uk" target="_blank">andrey.gaevskiy@travisperkins.co.uk</a>&gt;<br>
+<b>Subject:</b> Re: Microsite upload</span><u></u><u></u></p>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<p class="MsoNormal">Yes, the same with the 403 message.<u></u><u></u></p>
+<div>
+<p class="MsoNormal"><br clear="all">
+<u></u><u></u></p>
+<div>
+<div>
+<div>
+<div>
+<p class="MsoNormal">Kind regards,<u></u><u></u></p>
+</div>
+<p class="MsoNormal">Nicola Woodstock<u></u><u></u></p>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<p class="MsoNormal">Digital Content Editor | Travis Perkins<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal"><a href="https://www.travisperkins.co.uk/" target="_blank"><span style="font-size:9.5pt;font-family:Arial,sans-serif">travisperkins.co.uk</span></a><u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<div>
+<p class="MsoNormal">On Wed, 20 Jul 2022 at 13:32, Peter Shorney &lt;<a href="mailto:Peter.Shorney@walk-in-media.com" target="_blank">Peter.Shorney@walk-in-media.com</a>&gt; wrote:<u></u><u></u></p>
+</div>
+<blockquote style="border-top:none;border-right:none;border-bottom:none;border-left:1pt solid rgb(204,204,204);padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt">
+<div>
+<div>
+<p class="MsoNormal"><span style="font-size:12pt;color:black">Hi Michael</span><u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size:12pt;color:black">&nbsp;</span><u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size:12pt;color:black">Yes, getting a 403 on both links.</span><u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size:12pt;color:black">&nbsp;</span><u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size:12pt;color:black">Pete</span><u></u><u></u></p>
+</div>
+<div class="MsoNormal" align="center" style="text-align:center">
+<hr size="1" width="98%" align="center">
+</div>
+<div id="gmail-m_2742688731589587225gmail-m_572267255163259940gmail-m_6418855735943035342gmail-m_3396306880871245790gmail-m_8859589081146046111gmail-m_7473852636621500963divRplyFwdMsg">
+<p class="MsoNormal"><b><span style="color:black">From:</span></b><span style="color:black"> Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt;<br>
+<b>Sent:</b> Wednesday, July 20, 2022 12:53 PM<br>
+<b>To:</b> Nikita Lakisov &lt;<a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank">nikita.lakisov@travisperkins.co.uk</a>&gt;<br>
+<b>Cc:</b> Nicola Woodstock &lt;<a href="mailto:nicola.woodstock@travisperkins.co.uk" target="_blank">nicola.woodstock@travisperkins.co.uk</a>&gt;; Peter Shorney &lt;<a href="mailto:Peter.Shorney@walk-in-media.com" target="_blank">Peter.Shorney@walk-in-media.com</a>&gt;;
+ Andrey Gaevskiy &lt;<a href="mailto:andrey.gaevskiy@travisperkins.co.uk" target="_blank">andrey.gaevskiy@travisperkins.co.uk</a>&gt;<br>
+<b>Subject:</b> Re: Microsite upload</span> <u></u><u></u></p>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+</div>
+<div>
+<p class="MsoNormal">Hi Nikita, <u></u><u></u></p>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">I take it we need a VPN to access UAT?<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">Nic/Pete - do you get a 403 response in your browser?<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal" style="margin-bottom:12pt">Michael<u></u><u></u></p>
+<div>
+<p class="MsoNormal">Sent from my iPhone<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+<blockquote style="margin-top:5pt;margin-bottom:5pt">
+<p class="MsoNormal" style="margin-bottom:12pt">On 20 Jul 2022, at 12:49, Nikita Lakisov &lt;<a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank">nikita.lakisov@travisperkins.co.uk</a>&gt; wrote:<u></u><u></u></p>
+</blockquote>
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal" style="margin-bottom:12pt"><b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)">Peter Shorney</span></b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)"><br>
+Content Account Manager<br>
+</span><span style="font-family:Tahoma,sans-serif;color:rgb(255,131,65)">-------------------<br>
+Walk-In Media</span><u></u><u></u></p>
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style="margin-top:5pt;margin-bottom:5pt">
+<div>
+<p class="MsoNormal">﻿ <u></u><u></u></p>
+<div>
+<p class="MsoNormal">Hi all<br>
+<br>
+UAT closed environment is deployed, you may find published microsite using next steps:&nbsp;<br>
+1. Switch to a closed UAT environment by visiting <a href="https://www-uat2.dev.travisperkins.co.uk/closed" target="_blank">
+https://www-uat2.dev.travisperkins.co.uk/closed</a> link<br>
+2. Visit microsite page link&nbsp;<a href="https://www-uat2.dev.travisperkins.co.uk/trade-corner/gardening-calendar/summer" target="_blank">https://www-uat2.dev.travisperkins.co.uk/trade-corner/gardening-calendar/summer</a><br>
+<br>
+Please keep in mind that the microsite bundle archive should have an index.html file at the root level. I have reuploaded the archive with this fix.<br>
+Invalid example:<br>
+&nbsp;<img border="0" width="425" height="271" style="width: 4.4305in; height: 2.8194in;" id="gmail-m_2742688731589587225gmail-m_572267255163259940gmail-m_6418855735943035342gmail-m_3396306880871245790gmail-m_8859589081146046111Picture_x0020_2" src="cid:1822134c8cc4cff311" alt="image001.png"><img border="0" width="416" height="267" style="width: 4.3333in; height: 2.7847in;" id="gmail-m_2742688731589587225gmail-m_572267255163259940gmail-m_6418855735943035342gmail-m_3396306880871245790gmail-m_8859589081146046111Picture_x0020_3" src="cid:1822134c8cd5b16b22" alt="image002.png"><br>
+Valid example:<br>
+<img border="0" width="427" height="274" style="width: 4.4513in; height: 2.8541in;" id="gmail-m_2742688731589587225gmail-m_572267255163259940gmail-m_6418855735943035342gmail-m_3396306880871245790gmail-m_8859589081146046111Picture_x0020_4" src="cid:1822134c8cd692e333" alt="image003.png"><br>
+<br>
+<br>
+Thanks,<br>
+Nikita<u></u><u></u></p>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<div>
+<p class="MsoNormal">On Wed, 20 Jul 2022 at 13:14, Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt; wrote:<u></u><u></u></p>
+</div>
+<blockquote style="border-top:none;border-right:none;border-bottom:none;border-left:1pt solid rgb(204,204,204);padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt">
+<div>
+<p class="MsoNormal">I see Andrey sent an invite for 12pm. Would you be able to join the one just sent from Anya as it has all of us on.
+<u></u><u></u></p>
+<div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal">Thanks<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal" style="margin-bottom:12pt">Michael<u></u><u></u></p>
+<div>
+<p class="MsoNormal">Sent from my iPhone<u></u><u></u></p>
+</div>
+<div>
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+<blockquote style="margin-top:5pt;margin-bottom:5pt">
+<p class="MsoNormal" style="margin-bottom:12pt">&nbsp;<u></u><u></u></p>
+<p class="MsoNormal"><b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)">Michael Gifford-Ross</span></b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)"><br>
+Head of SEO<br>
+</span><span style="font-family:Tahoma,sans-serif;color:rgb(255,131,65)">-------------------<br>
+Walk-In Media<br>
+M: 07712275736</span><u></u><u></u></p>
+<p class="MsoNormal" style="margin-bottom:12pt"><br>
+<br>
+On 20 Jul 2022, at 11:01, Nikita Lakisov &lt;<a href="mailto:nikita.lakisov@travisperkins.co.uk" target="_blank">nikita.lakisov@travisperkins.co.uk</a>&gt; wrote:<u></u><u></u></p>
+</blockquote>
+</div>
+<blockquote style="margin-top:5pt;margin-bottom:5pt">
+<div>
+<p class="MsoNormal">﻿ <u></u><u></u></p>
+<div>
+<p class="MsoNormal">Hi&nbsp;Michael,<br>
+<br>
+12pm is ok for me, lets's schedule&nbsp;a meeting<br>
+<br>
+Thanks,<br>
+Nikita<u></u><u></u></p>
+</div>
+<p class="MsoNormal">&nbsp;<u></u><u></u></p>
+<div>
+<div>
+<p class="MsoNormal">On Wed, 20 Jul 2022 at 11:59, Michael Gifford-Ross &lt;<a href="mailto:Michael.Gifford-Ross@walk-in-media.com" target="_blank">Michael.Gifford-Ross@walk-in-media.com</a>&gt; wrote:<u></u><u></u></p>
+</div>
+<blockquote style="border-top:none;border-right:none;border-bottom:none;border-left:1pt solid rgb(204,204,204);padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt">
+<div>
+<p class="MsoNormal" style="margin-bottom:12pt">Hi Nikita/Andrew,<br>
+<br>
+We had some trouble this morning uploading the bundle to hippo CMS. Would you be on hand for 12pm BST to run us through it.<br>
+<br>
+FYI - we haven’t got the field to select the microsite type when uploading so this may be the issue.<br>
+<br>
+Regards,<br>
+Michael<br>
+<br>
+Sent from my iPhone<u></u><u></u></p>
+<p class="MsoNormal"><b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)">Michael Gifford-Ross</span></b><span style="font-family:Tahoma,sans-serif;color:rgb(42,28,101)"><br>
+Head of SEO<br>
+</span><span style="font-family:Tahoma,sans-serif;color:rgb(255,131,65)">-------------------<br>
+Walk-In Media<br>
+M: 07712275736</span><u></u><u></u></p>
+<p class="MsoNormal"><br>
+<br>
+<br>
+<span style="font-size:7.5pt;font-family:Arial,sans-serif;color:rgb(204,204,204)"># MSQ Partners Ltd or any of its subsidiary companies may not be held responsible for the content of this email as it may reflect the personal view of the sender and not that
+ of the company. Should you receive this email in error, please notify the sender immediately and do not disclose, copy or distribute it. While MSQ Partners Ltd scans all outbound emails for viruses, it cannot be held responsible for any infected files that
+ you may receive. MSQ Partners Ltd advises all recipients to virus scan any file attachments. MSQ Partners Ltd | Registered in England No.: 7745643 | Registered Office: 34 Bow Street, London, WC2E 7AU</span>
+<u></u><u></u></p>
+</div>
+</blockquote>
+</div>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in
+ error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way
+ House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements
+ binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><br>
+</span><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have
+ been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.</span></i><u></u><u></u></p>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in
+ error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way
+ House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements
+ binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><br>
+</span><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have
+ been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.</span></i>
+<u></u><u></u></p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in
+ error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way
+ House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements
+ binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><br>
+</span><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have
+ been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.</span></i>
+<u></u><u></u></p>
+</div>
+</div>
+</blockquote>
+</div>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in
+ error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way
+ House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements
+ binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><br>
+</span><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have
+ been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.</span></i>
+<u></u><u></u></p>
+</div>
+</div>
+</blockquote>
+</div>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in
+ error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way
+ House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements
+ binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><br>
+</span><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have
+ been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.</span></i>
+<u></u><u></u></p>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in
+ error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span><u></u><u></u></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way
+ House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements
+ binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.</span></i><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><br>
+</span><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have
+ been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.</span></i>
+<u></u><u></u></p>
+</div>
+</div>
+</blockquote>
+</div>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><u></u>&nbsp;<u></u></span></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in
+ error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.</span></i><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><u></u><u></u></span></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><u></u>&nbsp;<u></u></span></p>
+<p style="margin:0cm"><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way
+ House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements
+ binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.</span></i><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><u></u><u></u></span></p>
+<p class="MsoNormal"><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif"><br>
+</span><i><span style="font-size:9pt;font-family:&quot;Courier New&quot;;color:rgb(34,34,34);background:white">E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have
+ been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.</span></i>
+<u></u><u></u></p>
+</div>
+</div>
+</blockquote>
+</div>
+<br>
+<b style="font-family:'Times New Roman';font-size:medium;font-weight:normal">
+<p dir="ltr" style="line-height:1.15;margin-top:0pt;margin-bottom:0pt"><span style="font-size:12px;font-family:'Courier New';color:rgb(34,34,34);background-color:rgb(255,255,255);font-style:italic;vertical-align:baseline;white-space:pre-wrap">This e-mail and
+ any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.</span></p>
+<br>
+<span style="font-size:12px;font-family:'Courier New';color:rgb(34,34,34);background-color:rgb(255,255,255);font-style:italic;vertical-align:baseline;white-space:pre-wrap"></span>
+<p dir="ltr" style="line-height:1.15;margin-top:0pt;margin-bottom:0pt"><span style="font-size:12px;font-family:'Courier New';color:rgb(34,34,34);background-color:rgb(255,255,255);font-style:italic;vertical-align:baseline;white-space:pre-wrap">This message is
+ attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821;
+ Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.</span></p>
+<br>
+<span style="font-size:12px;font-family:'Courier New';color:rgb(34,34,34);background-color:rgb(255,255,255);font-style:italic;vertical-align:baseline;white-space:pre-wrap"></span><span style="font-size:12px;font-family:'Courier New';color:rgb(34,34,34);background-color:rgb(255,255,255);font-style:italic;vertical-align:baseline;white-space:pre-wrap">E-mail
+ transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection
+ and recommends that you scan this e-mail and any attachments.</span></b>
+</body>
+</html>

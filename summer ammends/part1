@@ -1,0 +1,475 @@
+Hi Michael
+
+The issue with leaf images appears because these images are not present in the initial HTML response. Images are created programmatically.
+
+Website transforms relative image URLs by adding a Hippo CMS domain prefix. In this case it would be https://api-content-uat1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg<https://api-content-uat1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg>
+
+In order to fix the issue you may:
+- Add these images to the index.html file. In this case website would automatically transform URLs
+or
+- Create a URL programmatically by adding prefix. Keep in mind that this prefix would be different for staging and production environments.
+   UAT - https://api-content-uat1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg<https://api-content-uat1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg>
+   CAND - https://api-content-cand1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg<https://api-content-cand1.test.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg>
+   PROD - https://api.content.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg<https://api.content.travisperkins.co.uk/site/ms/trade-corner-calendar/summer/static_assets/leaf.svg>
+
+Thanks,
+Nikita
+
+On Thu, 21 Jul 2022 at 16:29, Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>> wrote:
+
+
+   Great, thanks, good to know. I take it when we do publish that we can whenever and it should be in hippo cms production?
+
+
+
+   Regards,
+
+   Michael
+
+
+
+
+
+   Michael Gifford-Ross
+   Head of SEO
+   -------------------
+   Walk-In Media
+   M: 07712275736
+
+
+
+
+   From: Nikita Lakisov <nikita.lakisov@travisperkins.co.uk<mailto:nikita.lakisov@travisperkins.co.uk>>
+   Sent: 21 July 2022 14:26
+   To: Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>>
+   Cc: Nicola Woodstock <nicola.woodstock@travisperkins.co.uk<mailto:nicola.woodstock@travisperkins.co.uk>>; Peter Shorney <Peter.Shorney@walk-in-media.com<mailto:Peter.Shorney@walk-in-media.com>>; Andrey Gaevskiy <andrey.gaevskiy@travisperkins.co.uk<mailto:andrey.gaevskiy@travisperkins.co.uk>>
+   Subject: Re: Microsite upload
+
+
+
+   Hi Michael
+
+   You may unpublish it. But it is not necessary, as it was published on the UAT environment
+
+   Thanks,
+   Nikita
+
+
+
+   On Thu, 21 Jul 2022 at 15:30, Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>> wrote:
+
+      Should we just unpublish the bundle that we’ve created for now then?
+
+
+
+      Regards,
+      Michael
+
+
+
+
+
+      Michael Gifford-Ross
+      Head of SEO
+      -------------------
+      Walk-In Media
+      M: 07712275736
+
+
+
+      From: Nikita Lakisov <nikita.lakisov@travisperkins.co.uk<mailto:nikita.lakisov@travisperkins.co.uk>>
+      Sent: 21 July 2022 11:15
+      To: Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>>
+      Cc: Nicola Woodstock <nicola.woodstock@travisperkins.co.uk<mailto:nicola.woodstock@travisperkins.co.uk>>; Peter Shorney <Peter.Shorney@walk-in-media.com<mailto:Peter.Shorney@walk-in-media.com>>; Andrey Gaevskiy <andrey.gaevskiy@travisperkins.co.uk<mailto:andrey.gaevskiy@travisperkins.co.uk>>
+      Subject: Re: Microsite upload
+
+
+
+      Hi Michael
+
+      We may release to production microsite integration code if there is no issue with the integration itself.
+      It would not automatically publish new microsite pages. It would just give you the possibility to publish new microsite pages when bundles are ready.
+      Do you have any concerns?
+
+      Thanks,
+      Nikita
+
+
+
+      On Thu, 21 Jul 2022 at 11:11, Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>> wrote:
+
+         Thank Nikita,
+
+
+
+         We will take this to CHC and revert. For the time-being can we not release to production. Hopefully we will have fixed the issues in time for next week’s release.
+
+
+
+         M
+
+         Sent from my iPhone
+
+
+
+
+
+            Michael Gifford-Ross
+            Head of SEO
+            -------------------
+            Walk-In Media
+            M: 07712275736
+
+
+
+            On 21 Jul 2022, at 09:04, Nikita Lakisov <nikita.lakisov@travisperkins.co.uk<mailto:nikita.lakisov@travisperkins.co.uk>> wrote:
+
+            ﻿
+
+            Hi Michael
+
+            If you mean scrolling on the microsite page - it is controlled by the microsite bundle. Website scripts do not affect anything on this page
+
+            Thanks,
+            Nikita
+
+
+
+            On Wed, 20 Jul 2022 at 18:44, Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>> wrote:
+
+               Hi Nikita,
+
+
+
+               I’ll get back to you but there are some issues that we need to fix. We have reached out to CHC digital to see if this is an issue with the bundle.
+
+
+
+               I don’t know if you spotted that the scrolling behaviour isn’t working as expected? Can you confirm whether this an issue that needs fixing your end or with CHC Digital (providers of the creative)?
+
+
+
+               Regards,
+
+               Michael
+
+
+
+
+
+               Michael Gifford-Ross
+               Head of SEO
+               -------------------
+               Walk-In Media
+               M: 07712275736
+
+
+
+               From: Nikita Lakisov <nikita.lakisov@travisperkins.co.uk<mailto:nikita.lakisov@travisperkins.co.uk>>
+               Sent: 20 July 2022 16:14
+               To: Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>>
+               Cc: Nicola Woodstock <nicola.woodstock@travisperkins.co.uk<mailto:nicola.woodstock@travisperkins.co.uk>>; Peter Shorney <Peter.Shorney@walk-in-media.com<mailto:Peter.Shorney@walk-in-media.com>>; Andrey Gaevskiy <andrey.gaevskiy@travisperkins.co.uk<mailto:andrey.gaevskiy@travisperkins.co.uk>>
+               Subject: Re: Microsite upload
+
+
+
+               Hi Michael
+
+               Sorry for the late reply. I have a free time today till the end of day. Or tomorrow 11:30....3pm
+
+               Thanks,
+               Nikita
+
+
+
+               On Wed, 20 Jul 2022 at 15:52, Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>> wrote:
+
+                  @Nikita Lakisov<mailto:nikita.lakisov@travisperkins.co.uk> are you free at 2pm, there are some issues with scrolling.
+
+
+
+                  Michael
+
+
+
+
+
+                  Michael Gifford-Ross
+                  Head of SEO
+                  -------------------
+                  Walk-In Media
+                  M: 07712275736
+
+
+
+                  From: Michael Gifford-Ross
+                  Sent: 20 July 2022 13:51
+                  To: Nicola Woodstock <nicola.woodstock@travisperkins.co.uk<mailto:nicola.woodstock@travisperkins.co.uk>>; Peter Shorney <Peter.Shorney@walk-in-media.com<mailto:Peter.Shorney@walk-in-media.com>>
+                  Cc: Nikita Lakisov <nikita.lakisov@travisperkins.co.uk<mailto:nikita.lakisov@travisperkins.co.uk>>; Andrey Gaevskiy <andrey.gaevskiy@travisperkins.co.uk<mailto:andrey.gaevskiy@travisperkins.co.uk>>
+                  Subject: RE: Microsite upload
+
+
+
+                  Hi Nic/Pete,
+
+
+
+                  I have a VPN (whitelisted for UAT). Do you want to jump on a quick call so you can have a look?
+
+
+
+                  Regards,
+                  Michael
+
+
+
+                  From: Nicola Woodstock <nicola.woodstock@travisperkins.co.uk<mailto:nicola.woodstock@travisperkins.co.uk>>
+                  Sent: 20 July 2022 13:49
+                  To: Peter Shorney <Peter.Shorney@walk-in-media.com<mailto:Peter.Shorney@walk-in-media.com>>
+                  Cc: Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>>; Nikita Lakisov <nikita.lakisov@travisperkins.co.uk<mailto:nikita.lakisov@travisperkins.co.uk>>; Andrey Gaevskiy <andrey.gaevskiy@travisperkins.co.uk<mailto:andrey.gaevskiy@travisperkins.co.uk>>
+                  Subject: Re: Microsite upload
+
+
+
+                  Yes, the same with the 403 message.
+
+
+
+
+                  Kind regards,
+
+                  Nicola Woodstock
+
+
+
+                  Digital Content Editor | Travis Perkins
+
+                  travisperkins.co.uk<https://www.travisperkins.co.uk/>
+
+
+
+
+
+
+
+
+
+
+
+                  On Wed, 20 Jul 2022 at 13:32, Peter Shorney <Peter.Shorney@walk-in-media.com<mailto:Peter.Shorney@walk-in-media.com>> wrote:
+
+                     Hi Michael
+
+
+
+                     Yes, getting a 403 on both links.
+
+
+
+                     Pete
+
+                       _____
+
+                     From: Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>>
+                     Sent: Wednesday, July 20, 2022 12:53 PM
+                     To: Nikita Lakisov <nikita.lakisov@travisperkins.co.uk<mailto:nikita.lakisov@travisperkins.co.uk>>
+                     Cc: Nicola Woodstock <nicola.woodstock@travisperkins.co.uk<mailto:nicola.woodstock@travisperkins.co.uk>>; Peter Shorney <Peter.Shorney@walk-in-media.com<mailto:Peter.Shorney@walk-in-media.com>>; Andrey Gaevskiy <andrey.gaevskiy@travisperkins.co.uk<mailto:andrey.gaevskiy@travisperkins.co.uk>>
+                     Subject: Re: Microsite upload
+
+
+
+                     Hi Nikita,
+
+
+
+                     I take it we need a VPN to access UAT?
+
+
+
+                     Nic/Pete - do you get a 403 response in your browser?
+
+
+
+                     Michael
+
+                     Sent from my iPhone
+
+
+
+                        On 20 Jul 2022, at 12:49, Nikita Lakisov <nikita.lakisov@travisperkins.co.uk<mailto:nikita.lakisov@travisperkins.co.uk>> wrote:
+
+
+
+                     Peter Shorney
+                     Content Account Manager
+                     -------------------
+                     Walk-In Media
+
+
+
+                        ﻿
+
+                        Hi all
+
+                        UAT closed environment is deployed, you may find published microsite using next steps:
+                        1. Switch to a closed UAT environment by visiting https://www-uat2.dev.travisperkins.co.uk/closed<https://www-uat2.dev.travisperkins.co.uk/closed> link
+                        2. Visit microsite page link https://www-uat2.dev.travisperkins.co.uk/trade-corner/gardening-calendar/summer<https://www-uat2.dev.travisperkins.co.uk/trade-corner/gardening-calendar/summer>
+
+                        Please keep in mind that the microsite bundle archive should have an index.html file at the root level. I have reuploaded the archive with this fix.
+                        Invalid example:
+
+                        Valid example:
+
+
+
+                        Thanks,
+                        Nikita
+
+
+
+                        On Wed, 20 Jul 2022 at 13:14, Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>> wrote:
+
+                           I see Andrey sent an invite for 12pm. Would you be able to join the one just sent from Anya as it has all of us on.
+
+
+
+                           Thanks
+
+                           Michael
+
+                           Sent from my iPhone
+
+
+
+
+
+                              Michael Gifford-Ross
+                              Head of SEO
+                              -------------------
+                              Walk-In Media
+                              M: 07712275736
+
+
+
+                              On 20 Jul 2022, at 11:01, Nikita Lakisov <nikita.lakisov@travisperkins.co.uk<mailto:nikita.lakisov@travisperkins.co.uk>> wrote:
+
+                              ﻿
+
+                              Hi Michael,
+
+                              12pm is ok for me, lets's schedule a meeting
+
+                              Thanks,
+                              Nikita
+
+
+
+                              On Wed, 20 Jul 2022 at 11:59, Michael Gifford-Ross <Michael.Gifford-Ross@walk-in-media.com<mailto:Michael.Gifford-Ross@walk-in-media.com>> wrote:
+
+                                 Hi Nikita/Andrew,
+
+                                 We had some trouble this morning uploading the bundle to hippo CMS. Would you be on hand for 12pm BST to run us through it.
+
+                                 FYI - we haven’t got the field to select the microsite type when uploading so this may be the issue.
+
+                                 Regards,
+                                 Michael
+
+                                 Sent from my iPhone
+
+                                 Michael Gifford-Ross
+                                 Head of SEO
+                                 -------------------
+                                 Walk-In Media
+                                 M: 07712275736
+
+
+
+
+                                 # MSQ Partners Ltd or any of its subsidiary companies may not be held responsible for the content of this email as it may reflect the personal view of the sender and not that of the company. Should you receive this email in error, please notify the sender immediately and do not disclose, copy or distribute it. While MSQ Partners Ltd scans all outbound emails for viruses, it cannot be held responsible for any infected files that you may receive. MSQ Partners Ltd advises all recipients to virus scan any file attachments. MSQ Partners Ltd | Registered in England No.: 7745643 | Registered Office: 34 Bow Street, London, WC2E 7AU
+
+
+
+                              This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.
+
+
+
+                              This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.
+
+
+                              E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.
+
+
+
+                        This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.
+
+
+
+                        This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.
+
+
+                        E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.
+
+
+
+                  This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.
+
+
+
+                  This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.
+
+
+                  E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.
+
+
+
+               This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.
+
+
+
+               This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.
+
+
+               E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.
+
+
+
+            This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.
+
+
+
+            This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.
+
+
+            E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.
+
+
+
+      This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.
+
+
+
+      This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.
+
+
+      E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.
+
+
+
+   This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.
+
+
+
+   This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.
+
+
+   E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.
+
+
+   This e-mail and any attachments are confidential and intended solely for the use of the addressee only. If you have received this message in error, you must not copy, distribute or disclose the contents; please notify the sender immediately and delete the message.
+
+
+   This message is attributed to the sender and may not necessarily reflect the view of Travis Perkins Trading Company Limited, 733503, Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG or its parent company Travis Perkins plc (Registered in England No. 824821; Lodge Way House, Lodge Way, Harlestone Road, Northampton, NN5 7UG; VAT number 408556737) and any of its subsidiaries. Agreements binding Travis Perkins Trading Company Limited may not be concluded by means of e-mail communication.
+
+
+   E-mail transmissions are not secure and Travis Perkins Trading accepts no responsibility for changes made to this message after it was sent. Whilst steps have been taken to ensure that this message is virus free, Travis Perkins Trading accepts no liability for infection and recommends that you scan this e-mail and any attachments.
