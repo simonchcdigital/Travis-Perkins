@@ -17,10 +17,26 @@ window.addEventListener("DOMContentLoaded", function(event){
 	setup_nav();
 	setup_scroll_transitions();
 	setup_keyboard_actions();
-
-	document.querySelector("#nav-item-0").click();
+	setup_anchors();
 });
 
+function setup_anchors(){
+	window.addEventListener("popstate", go_to_anchor);
+
+	// if the page loads with an anchor go to it
+	if(window.location.hash != ""){
+		go_to_anchor();
+	}
+}
+
+function go_to_anchor(){
+	let section_num = parseInt(window.location.hash.match(/-(\d+)/)[1]);
+	let num_sections = document.querySelectorAll(".nav-item").length;
+	if(section_num < num_sections && section_num >= 0){
+		// simulate a click on the next section
+		document.querySelector("#nav-item-" + section_num).click();
+	}
+}
 
 
 function cssProp(css_name){
